@@ -32,7 +32,7 @@ export function SignInForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Email</label>
           <input
-            className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none"
+            className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none text-gray-900"
             type="email"
             name="email"
             placeholder="name@example.com"
@@ -45,7 +45,7 @@ export function SignInForm() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Password</label>
           <input
-            className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none"
+            className="w-full px-4 py-2 rounded-lg border focus:ring-2 focus:ring-blue-500 outline-none text-gray-900"
             type="password"
             name="password"
             placeholder="••••••••"
