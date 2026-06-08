@@ -401,7 +401,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
               type="time" 
               value={startTime} 
               onChange={e => onStartTimeChange(e.target.value)}
-              style={{ fontSize: 18 }}
+              style={{ fontSize: 18, maxWidth: "100%", minWidth: 0 }}
             />
           </div>
 
@@ -422,7 +422,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
               type="time" 
               value={endTime} 
               onChange={e => onEndTimeChange(e.target.value)}
-              style={{ fontSize: 18 }}
+              style={{ fontSize: 18, maxWidth: "100%", minWidth: 0 }}
             />
           </div>
 
