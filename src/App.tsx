@@ -385,7 +385,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
       <div className="card" style={{ padding: "28px 24px", marginBottom: 20, overflow: "hidden" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {/* Start Time */}
-          <div>
+          <div style={{ width: "100%" }}>
             <label style={{ 
               fontSize: 13, 
               color: "var(--text-secondary)", 
@@ -406,7 +406,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
           </div>
 
           {/* End Time */}
-          <div>
+          <div style={{ width: "100%" }}>
             <label style={{ 
               fontSize: 13, 
               color: "var(--text-secondary)", 
