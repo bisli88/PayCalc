@@ -1,6 +1,3 @@
-import { Authenticated, Unauthenticated } from "convex/react";
-import { SignInForm } from "./SignInForm";
-import { SignOutButton } from "./SignOutButton";
 import { Toaster, toast } from "sonner";
 import { useState, useMemo } from "react";
 
@@ -142,64 +139,13 @@ export default function App() {
         }
       `}</style>
 
-      <Authenticated>
-        <MainApp />
-      </Authenticated>
-      <Unauthenticated>
-        <LoginScreen />
-      </Unauthenticated>
+      <MainApp />
 
       <Toaster position="top-center" theme="dark" />
     </div>
   );
 }
 
-// ── Login Screen ────────────────────────────────────────────
-function LoginScreen() {
-  return (
-    <div style={{ 
-      minHeight: "100vh", 
-      display: "flex", 
-      alignItems: "center", 
-      justifyContent: "center",
-      padding: "20px"
-    }}>
-      <div className="card" style={{ 
-        width: "100%", 
-        maxWidth: 420, 
-        padding: "48px 28px", 
-        textAlign: "center" 
-      }}>
-        <div style={{ 
-          width: 80, 
-          height: 80, 
-          margin: "0 auto 20px",
-          background: "linear-gradient(135deg, var(--accent) 0%, #9b87f5 100%)",
-          borderRadius: 20,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: 40,
-          boxShadow: "0 8px 24px var(--accent-glow)"
-        }}>
-          ⏱️
-        </div>
-        <h1 style={{ fontSize: 32, fontWeight: 800, marginBottom: 8, letterSpacing: "-0.5px" }}>
-          מחשבון שעות
-        </h1>
-        <p style={{ 
-          color: "var(--text-secondary)", 
-          marginBottom: 36, 
-          fontSize: 15,
-          fontWeight: 500
-        }}>
-          התחבר כדי להתחיל לחשב
-        </p>
-        <SignInForm />
-      </div>
-    </div>
-  );
-}
 
 // ── Main App ────────────────────────────────────────────────
 type View = "calculator" | "breakdown";
@@ -414,20 +360,6 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
         marginBottom: 32,
         paddingTop: 8
       }}>
-        <div style={{
-          width: 64,
-          height: 64,
-          margin: "0 auto 16px",
-          background: "linear-gradient(135deg, var(--accent) 0%, #9b87f5 100%)",
-          borderRadius: 16,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: 32,
-          boxShadow: "0 8px 24px var(--accent-glow)"
-        }}>
-          ⏱️
-        </div>
         <h1 style={{ 
           fontSize: 28, 
           fontWeight: 800, 
@@ -625,13 +557,11 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
         </span>
       </button>
 
-      {/* Sign Out */}
-      <div style={{ marginTop: 24, display: "flex", justifyContent: "center" }}>
-        <SignOutButton />
-      </div>
-    </div>
-  );
-}
+      
+    </div>  
+  );       
+}           
+
 
 // ── Breakdown ───────────────────────────────────────────────
 function Breakdown({ calculation }: { calculation: Calculation | null }) {
