@@ -382,7 +382,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
       </div>
 
       {/* Main Calculator Card */}
-      <div className="card" style={{ padding: "28px 24px", marginBottom: 20 }}>
+      <div className="card" style={{ padding: "28px 24px", marginBottom: 20, overflow: "hidden" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {/* Start Time */}
           <div>
@@ -401,7 +401,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
               type="time" 
               value={startTime} 
               onChange={e => onStartTimeChange(e.target.value)}
-              style={{ fontSize: 18, maxWidth: "100%", minWidth: 0 }}
+              style={{ fontSize: 18, width: "100%", boxSizing: "border-box", display: "block" }}
             />
           </div>
 
@@ -422,7 +422,7 @@ function Calculator({ startTime, endTime, hourlyRate, onStartTimeChange, onEndTi
               type="time" 
               value={endTime} 
               onChange={e => onEndTimeChange(e.target.value)}
-              style={{ fontSize: 18, maxWidth: "100%", minWidth: 0 }}
+              style={{ fontSize: 18, width: "100%", boxSizing: "border-box", display: "block" }}
             />
           </div>
 
